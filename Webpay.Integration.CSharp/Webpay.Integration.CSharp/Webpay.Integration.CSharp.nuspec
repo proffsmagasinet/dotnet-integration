@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>$id$</id>
+        <version>1.0.2</version>
+        <title>$title$</title>
+        <authors>SveaWebPay</authors>
+        <owners>SveaWebPay</owners>
+        <iconUrl>https://github.com/VirtoCommerce/vc-module-cart/raw/master/NuGet/icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>SveaWebpay Integration</description>
+        <copyright>Copyright ©  2016</copyright>
+    </metadata>
+</package>
