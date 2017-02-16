@@ -1,4 +1,5 @@
-﻿using Webpay.Integration.CSharp.AdminWS;
+﻿using System.ServiceModel;
+using Webpay.Integration.CSharp.AdminWS;
 using Webpay.Integration.CSharp.Exception;
 using Webpay.Integration.CSharp.Order.Handle;
 using Webpay.Integration.CSharp.Util.Constant;
@@ -40,7 +41,7 @@ namespace Webpay.Integration.CSharp.AdminService
 
             // make request to correct endpoint, return response object
             var endpoint = _builder.GetConfig().GetEndPoint(PaymentType.ADMIN_TYPE);
-            var adminWS = new AdminServiceClient("WcfAdminSoapService", endpoint);
+            var adminWS = new AdminServiceClient(new WSHttpBinding(SecurityMode.Transport), new EndpointAddress(endpoint));
             var response = adminWS.DeliverPartial(request);
 
             return response;
